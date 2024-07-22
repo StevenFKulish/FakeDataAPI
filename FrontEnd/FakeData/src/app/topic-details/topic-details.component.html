@@ -1,0 +1,79 @@
+<div class="container detailsContainer">
+    <h1 class="text-center mb-2">Topic Details</h1>
+    <div class="row">
+        <div class="col-md-2">
+            <label>ID</label>
+        </div>
+        <div class="col-md-10">
+            <p>{{ topic.id }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <label>User ID</label>
+        </div>
+        <div class="col-md-10">
+            <p>{{ topic.userId }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <label>Title</label>
+        </div>
+        <div class="col-md-10">
+            <p>{{ topic.title }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <label>Body</label>
+        </div>
+        <div class="col-md-10">
+            <p>{{ topic.body }}</p>
+        </div>
+    </div>
+    <div class="row detailsBackLink">
+        <div class="col-md-12 text-center">
+            <a [routerLink]="['']">back to list</a>
+        </div>
+    </div>
+    <hr />
+    <h3 class="text-center mb-2">Comments</h3>
+    <div class="commentsSection">
+        <div *ngFor="let comment of comments">
+            <div class="row justify-content-center">
+                <div class="col-md-2">
+                    <label>Id</label>
+                </div>
+                <div class="col-md-6">
+                    <p>{{ comment.id }}</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-2">
+                    <label>Name</label>
+                </div>
+                <div class="col-md-6">
+                    <p>{{ comment.name }}</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-2">
+                    <label>Email</label>
+                </div>
+                <div class="col-md-6">
+                    <p>{{ comment.email }}</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-2">
+                    <label>Body</label>
+                </div>
+                <div class="col-md-6">
+                    <p>{{ comment.body }}</p>
+                </div>
+            </div>
+            <hr />
+        </div>
+    </div>
+</div>

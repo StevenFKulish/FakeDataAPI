@@ -1,0 +1,33 @@
+<div class="container">
+    <h1 class="text-center mb-2">Topics List</h1>
+    <div class="row mt-2">
+        <div class="col-lg-10 mx-auto">
+            <table datatable [dtOptions]="dtOptions" id="example" class="table table-bordered table-striped table-hover">
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>User ID</th>
+                    <th>Title</th>
+                    <th>Body</th>
+                    <th></th>
+                </tr>
+            </thead>
+                <tbody>
+                    <!-- (click)="rowSelect(topic)" [class.selected]="topic === selectedTopic" -->
+                    <tr *ngFor="let topic of topics">
+                        <td>{{ topic.id }}</td>
+
+                        <td>{{ topic.userId }}</td>
+         
+                        <td>{{ topic.title }}</td>
+         
+                        <td>{{ topic.body }}</td>
+
+                        <td><button (click)="buttonInRowClick(topic)">select</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
